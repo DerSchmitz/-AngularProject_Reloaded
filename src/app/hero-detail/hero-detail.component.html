@@ -1,0 +1,14 @@
+<!--ngIf hero != NULL display the including content -->
+<div *ngIf="hero">
+
+  <h2> {{hero.name | uppercase}} Details</h2>
+  <div><span>id: </span> {{hero.id}}</div>
+  <div><span>name: </span> {{hero.name}}</div>
+
+  <div>
+      <label>Change hero name:
+  <!-- [(ngModel)] two-way data binding / Zwei-Weg datenverbindung zwischen Interaktionsmögloichkeit in HTML und einem Objektattribut -->
+        <input [(ngModel)]="hero.name" placeholder="name">
+      </label>          <!-- hero.name wird in einem two-Way-Binding verbunden -->
+  </div>
+</div>

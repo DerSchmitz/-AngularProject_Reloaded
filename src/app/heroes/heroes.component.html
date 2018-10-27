@@ -1,0 +1,17 @@
+
+
+
+
+
+<h2>My personal Heroes</h2>
+<ul class="heroes">
+  <!--        spiele die liste, die in der Variable heroes steckt in das Objekt hero herein und iteriere jeden vorhandenen Listenppunkt einmal durch     -->
+                                  <!-- richte onclick listener auf den listenpunkt ein um bei klick einen Effekt abhängig von der Klassse "hero" zu erzielen -->
+                                                              <!-- Stelle eine Gleicheit zwischen dem objekt hero und dem objekt selectedhero her -->
+  <li *ngFor="let hero of heroes"  (click)="onSelect(hero)"  [class.selected]="hero === selectedHero">
+    <span class="badge">{{hero.id}}</span> {{hero.name}}
+  </li>
+</ul>
+
+
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>

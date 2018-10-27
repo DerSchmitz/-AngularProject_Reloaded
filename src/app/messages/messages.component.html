@@ -1,0 +1,15 @@
+<!-- Falls die messages des Service messageService hat length!=0 -->
+<div *ngIf="messageService.messages.length">
+
+<!-- Gebe das heir aus-->
+  <h2>Messages</h2>
+
+  <!-- Button, um messages zu löschen-->
+  <button class="clear"
+          (click)="messageService.clear()">clear</button>
+
+            <!-- für jede message der im messageService gespeicherten messageList -->
+  <div *ngFor='let message of messageService.messages'> {{message}} </div>
+  <!-- gebe message als String aus-->
+
+</div>
